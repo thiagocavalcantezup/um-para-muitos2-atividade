@@ -2,6 +2,7 @@ package br.com.zup.handora.umparamuitos2atividade.models;
 
 import java.util.Set;
 
+import javax.validation.Valid;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
@@ -23,6 +24,7 @@ public class AlbumDTO {
     @Max(100)
     private Integer numeroDePaginas;
 
+    @Valid
     @NotEmpty
     private Set<FigurinhaDTO> figurinhas;
 
