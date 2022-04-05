@@ -1,0 +1,15 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-UmParaMuitos2AtividadeApplication<um-para-muitos2-atividade>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "mainClass": "br.com.zup.handora.umparamuitos2atividade.UmParaMuitos2AtividadeApplication",
+      "projectName": "um-para-muitos2-atividade",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
