@@ -7,6 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.Positive;
 
 @Entity
 @Table(name = "figurinhas")
@@ -17,6 +18,7 @@ public class Figurinha {
     private Long id;
 
     @Column(nullable = false)
+    @Positive
     private Integer pagina;
 
     @Column(nullable = false)

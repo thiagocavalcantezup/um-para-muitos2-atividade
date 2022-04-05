@@ -2,10 +2,12 @@ package br.com.zup.handora.umparamuitos2atividade.models;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Positive;
 
 public class FigurinhaDTO {
 
     @NotNull
+    @Positive
     private Integer pagina;
 
     @NotBlank
