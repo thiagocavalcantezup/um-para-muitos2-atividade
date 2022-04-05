@@ -16,6 +16,10 @@ public class FigurinhaDTO {
         this.descricao = descricao;
     }
 
+    public Figurinha toModel() {
+        return new Figurinha(pagina, descricao);
+    }
+
     public Integer getPagina() {
         return pagina;
     }

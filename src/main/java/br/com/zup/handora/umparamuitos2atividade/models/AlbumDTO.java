@@ -26,15 +26,22 @@ public class AlbumDTO {
 
     @Valid
     @NotEmpty
-    private Set<FigurinhaDTO> figurinhas;
+    private Set<FigurinhaDTO> figurinhasDTO;
 
     public AlbumDTO(@NotBlank String titulo, @NotBlank @Size(max = 500) String descricao,
                     @NotNull @Min(10) @Max(100) Integer numeroDePaginas,
-                    @NotEmpty Set<FigurinhaDTO> figurinhas) {
+                    @NotEmpty Set<FigurinhaDTO> figurinhasDTO) {
         this.titulo = titulo;
         this.descricao = descricao;
         this.numeroDePaginas = numeroDePaginas;
-        this.figurinhas = figurinhas;
+        this.figurinhasDTO = figurinhasDTO;
+    }
+
+    public Album toModel() {
+        Album album = new Album(titulo, descricao, numeroDePaginas);
+        figurinhasDTO.forEach(figurinhaDTO -> album.adicionar(figurinhaDTO.toModel()));
+
+        return album;
     }
 
     public String getTitulo() {
@@ -49,8 +56,8 @@ public class AlbumDTO {
         return numeroDePaginas;
     }
 
-    public Set<FigurinhaDTO> getFigurinhas() {
-        return figurinhas;
+    public Set<FigurinhaDTO> getFigurinhasDTO() {
+        return figurinhasDTO;
     }
 
 }

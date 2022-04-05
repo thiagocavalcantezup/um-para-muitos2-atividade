@@ -48,6 +48,11 @@ public class Album {
         this.numeroDePaginas = numeroDePaginas;
     }
 
+    public void adicionar(Figurinha figurinha) {
+        figurinha.setAlbum(this);
+        figurinhas.add(figurinha);
+    }
+
     public Long getId() {
         return id;
     }
